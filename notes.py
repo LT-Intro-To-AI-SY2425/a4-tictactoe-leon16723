@@ -3,6 +3,7 @@
 # (define-struct dog [fur_color name age favorite_food])
 
 class Dog:
+    species = "canis familiariar"
     def __init__(self, n="no name", a=0):
         self.name=n
         self.age=a
