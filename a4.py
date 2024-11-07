@@ -1,5 +1,4 @@
-# NOTE: Until you fill in the TTTBoard class mypy is going to give you multiple errors
-# talking about unimplemented class attributes, don't worry about this as you're working
+
 
 
 class TTTBoard:
@@ -30,17 +29,17 @@ class TTTBoard:
         """Checks to see if the player has won the game"""
         ps = [player] * 3 # either ['X', 'X', 'X'] or ['O', 'O', 'O']
 
-        # Check Horizontal
+       
         if self.board[:3] == ps or self.board[3:6] == ps or self.board[6:] == ps:
             return True
-        # Check Vertical
+        
         if self.board[::3] == ps or self.board[1::3] == ps or self.board[2::3] == ps:
             return True
-        #Check Diagonal
+        
         if self.board[::4] == ps or self.board[2:7:2] == ps:
             return True
         
-        # return false if none of the above criteria has been met
+        
         return False
     
     def game_over(self) -> bool:
@@ -98,9 +97,7 @@ def play_tic_tac_toe() -> None:
 
 
 if __name__ == "__main__":
-    # here are some tests. These are not at all exhaustive tests. You will DEFINITELY
-    # need to write some more tests to make sure that your TTTBoard class is behaving
-    # properly.
+
     brd = TTTBoard()
     print(brd)
     brd.make_move("X", 8)
@@ -131,5 +128,5 @@ if __name__ == "__main__":
 
     print("All tests passed!")
 
-    # uncomment to play!
-    # play_tic_tac_toe()
+   
+    play_tic_tac_toe()
